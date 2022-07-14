@@ -1,0 +1,125 @@
+<div class="items-right-view1">
+    <!-- 1.第一行更新 -->
+    <div class="gengxin">
+        <div>
+            <div ng-click="onJumpPage('#!/view7/view7-time')">时间和语言</div>
+            <div>>语言和区域</div>
+        </div>
+    </div>
+    <!-- 第二部分 -->
+    <div class="more-choise">
+        <div class="more">
+            <!-- 语言 -->
+            <span>语言</span>
+            <div class="history">
+                <div class="img"><img src="./view1/font/stop.png" alt=""></div>
+                <div class="span">
+                    <span class="high">Windows显示语言</span>
+                    <span class="xiao">"设置"和"文件资源管理等"Windows功能将使用此语言显示</span>
+                </div>
+                <div class="left">
+                    <selectdrop class="select" url="http://127.0.0.1:5500/API/language.json"></selectdrop>
+                    <!-- <select ng-model="selected" ng-options="x.value as x.key for x in getlanguageList"></select> -->
+                    <!-- <selectdrop source="API/country.json"></selectdrop> -->
+                </div>
+            </div>
+            <!-- 首选语言 -->
+            <div class="history">
+                <div class="span">
+                    <span class="high">首选语言</span>
+                    <span class="xiao">应用将以此列表中支持的第一种语言显示</span>
+                </div>
+                <div class="left">
+                    <button>添加语言</button>
+                </div>
+            </div>
+
+            <div class="history">
+                <div class="img"><img src="./view1/font/stop.png" alt=""></div>
+                <div class="span">
+                    <span class="high">中文(简体，中国)</span>
+                    <span class="xiao">语言包，文本到语音转换，语音识别，手写，基本输入法</span>
+                </div>
+                <div class="left">
+                    <div>
+                        <span>...</span>
+                    </div>
+                    <!-- <div class="language-choise">
+                    <ul>
+                        <li><img src="./view1/font/wenhao.png" alt=""><span>语言选项</span></li>
+                        <li><img src="./view1/font/wenhao.png" alt=""><span>上移</span></li>
+                        <li><img src="./view1/font/wenhao.png" alt=""><span>下移</span></li>
+                        <li><img src="./view1/font/wenhao.png" alt=""><span>删除</span></li>
+
+                    </ul>
+                </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- 国家或地区 -->
+        <div class="more">
+            <div class="history">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span"><span>国家或地区<br />Windows和应用可能会根据你所在的国家或地区向你提供本地内容</span>
+                </div>
+                <div class="left">
+                    <selectdrop class="select" url="http://127.0.0.1:5500/API/country.json"></selectdrop>
+                    <!-- <select ng-model="selected" ng-options="x.value as x.key for x in getcountryList"></select> -->
+                </div>
+            </div>
+            <!-- 区域格式 -->
+            <div class="history">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span"><span>区域格式<br />Windows和某些应用根据区域格式设置日期和时间格式</span>
+                </div>
+                <div class="left">
+                    <selectdrop class="select" url="http://127.0.0.1:5500/API/region.json"></selectdrop>
+                    <!-- <select ng-model="selected" ng-options="x.value as x.key for x in getregionList"></select> -->
+                    <button ng-click="toggle()" class="img"><img src="./view7/font/Chevron-Right.png"alt=""></button>
+                </div>
+            </div>
+            <!-- 下拉区域 -->
+            <div ng-hide="myVar2" class="buttondropdown">
+                <ul>
+                    <li><div><span>区域格式:</span><span ng-model="style">{{style}}</span></div></li>
+                    <li><div><span>日历:</span><span ng-model="rili">{{rili}}</span></div></li>
+                    <li><div><span>一周的第一天:</span><span ng-model="firstday">{{firstday}}</span></div></li>
+                    <li><div><span>短日期:</span><span ng-model="shortday">{{shortday}}</span></div></li>
+                    <li><div><span>长日期:</span><span ng-model="longday">{{longday}}</span></div></li>
+                    <li><div><span>长时间:</span><span ng-model="longtime">{{longtime}}</span></div></li>
+                    <li><div><span>短时间:</span><span ng-model="shorttime">{{shorttime}}</span></div></li>
+                </ul>
+                <button>更改格式</button>
+            </div>
+        </div>
+        <!-- 相关设置-->
+        <div class="more">
+            <span>相关设置</span>
+            <!-- 输入 -->
+            <div class="history" ng-click="onJumpPage('#!/view7/view7-input')">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span">
+                    <span class="high">输入</span>
+                    <span class="xiao">拼写检查、自动更正、文本建议</span>
+                </div>
+                <div class="left"><img src="./view7/font/Chevron-Right.png" alt=""></div>
+            </div>
+            <!-- 输入 -->
+            <div class="history">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span">
+                    <span class="high">管理语言设置</span>
+                </div>
+                <div class="left"><img src="./view7/font/Chevron-Right.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="fankui-help">
+        <div><img src="./view1/font/wenhao.png" alt=""><span>获取帮助</span></div>
+        <div>
+            <img src="./view1/font/fankui.png" alt=""><span>提供反馈</span>
+        </div>
+
+    </div>
+</div>
+</div>

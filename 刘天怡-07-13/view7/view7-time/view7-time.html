@@ -1,0 +1,128 @@
+<script>
+    function displayDate() {
+        document.getElementById("shijian").innerHTML = Date();
+    }
+</script>
+<div class="items-right-view1">
+    <!-- 1.第一行更新 -->
+    <div class="gengxin">
+        <div>
+            <div ng-click="onJumpPage('#!/view7')">时间和语言</div>
+            <div ng-click="onJumpPage('#!/view7/view7-language')">>语言和区域</div>
+        </div>
+    </div>
+    <!-- 第二部分 -->
+    <div class="more-choise">
+        <div class="more">
+            <!-- 当前时间和日期 -->
+            <div class="history">
+                <div class="span">
+                    <span class="high">当前时间和日期</span>
+                </div>
+                <div class="left" id="this-time" onchange="getThistime()">
+                    {{date}}
+                </div>
+            </div>
+            <!-- 自动设置时间 -->
+            <div class="history">
+                <div class="span">
+                    <span>自动设置时间</span>
+                </div>
+                <div class="left">
+                    <div class="switch">
+                        <demoswitch opened="switch0"></demoswitch>
+                    </div>
+                </div>
+            </div>
+            <!-- 夏令时 -->
+            <div class="history">
+                <div class="span"><span>自动调整为夏令时</span></div>
+                <div class="left">
+                    <div class="switch">
+                        <demoswitch opened="switch1"></demoswitch>
+                    </div>
+                </div>
+            </div>
+            <!-- 时区 -->
+            <div class="history">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span"><span>时区</span>
+                </div>
+                <div class="left">
+                    <selectdrop class="select" url="http://127.0.0.1:5500/API/timeZone.json"></selectdrop>
+                    <!-- <select ng-init="gettimeZoneList" ng-model="selected" ng-options="x.value as x.key for x in gettimeZoneList"> -->
+                </select>
+                </div>
+            </div>
+            <!-- 自动设置时区-->
+            <div class="history">
+                <div class="span"><span>自动设置时区</span></div>
+                <div class="left">
+                    <div class="switch">
+                        <demoswitch opened="switch2"></demoswitch>
+                    </div>
+                </div>
+            </div>
+            <!-- 手动设置时间 -->
+            <div class="history">
+                <div class="span"><span>手动设置日期和时间</span></div>
+                <div class="left">
+                    <button>更改</button>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <p class=>其他设置</p>
+            <div class="history">
+                <div class="span">
+                    <span class="high">立即同步</span>
+                    <span class="xiao" id="time">当前时间：</span>
+                    <!-- <div>{{time}}</div> -->
+                    <span class="xiao">时间服务器:time.windows.com</span>
+                </div>
+                <div class="left">
+                    <div class="button">
+                        <button onclick="gettime()">立即同步</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 时区 -->
+            <div class="history">
+                <div class="span"><span>在任务栏中显示其他日历</span>
+                </div>
+                <div class="left">
+                    <selectdrop class="select" url="http://127.0.0.1:5500/API/calendar.json"></selectdrop>
+                    <!-- <select ng-init="getcalendarList" ng-model="selected" ng-options="x.value as x.key for x in getcalendarList"></select> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="more">
+            <p class=>相关链接</p>
+            <div class="history" ng-click="onJumpPage('#!/view7/view7-language')">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span">
+                    <span class="high">语言和区域</span>
+                    <span class="xiao">语言包/区域格式</span>
+                </div>
+                <div class="left"><img src="./view7/font/Chevron-Right.png" alt=""></div>
+            </div>
+            <!-- 时区 -->
+            <div class="history">
+                <div class="img"><img src="./view1/font/choise.png" alt=""></div>
+                <div class="span">
+                    <span class="high">附加时钟</span>
+                    <span class="xiao">不同时区的时钟</span>
+                </div>
+                <div class="left"><img src="./view7/font/Chevron-Right.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="fankui-help">
+        <div><img src="./view1/font/wenhao.png" alt=""><span>获取帮助</span></div>
+        <div>
+            <img src="./view1/font/fankui.png" alt=""><span>提供反馈</span>
+        </div>
+    </div>
+</div>
+</div>
