@@ -23,4 +23,6 @@
 .more > .divdropdown span {
   line-height: 80px;
   margin-left: 20px;
+  font-size: 17px;
+  color: black;
 }

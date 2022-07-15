@@ -10,5 +10,6 @@ angular.module('myApp.view7', ['ngRoute',"myApp.view7-input","myApp.view7-langua
 }])
 
 .controller('View7Ctrl', [function() {
+  
 
 }]);

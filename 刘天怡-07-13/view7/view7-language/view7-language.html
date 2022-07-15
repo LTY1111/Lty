@@ -60,7 +60,9 @@
         <div class="more">
             <div class="history">
                 <div class="img"><img src="./view1/font/choise.png" alt=""></div>
-                <div class="span"><span>国家或地区<br />Windows和应用可能会根据你所在的国家或地区向你提供本地内容</span>
+                <div class="span">
+                    <span class="high">国家或地区</span>
+                    <span class="xiao">Windows和应用可能会根据你所在的国家或地区向你提供本地内容</span>
                 </div>
                 <div class="left">
                     <selectdrop class="select" url="http://127.0.0.1:5500/API/country.json"></selectdrop>
@@ -70,24 +72,38 @@
             <!-- 区域格式 -->
             <div class="history">
                 <div class="img"><img src="./view1/font/choise.png" alt=""></div>
-                <div class="span"><span>区域格式<br />Windows和某些应用根据区域格式设置日期和时间格式</span>
+                <div class="span">
+                    <span class="high">区域格式</span>
+                    <span class="xiao">Windows和某些应用根据区域格式设置日期和时间格式</span>
                 </div>
                 <div class="left">
                     <selectdrop class="select" url="http://127.0.0.1:5500/API/region.json"></selectdrop>
-                    <!-- <select ng-model="selected" ng-options="x.value as x.key for x in getregionList"></select> -->
-                    <button ng-click="toggle()" class="img"><img src="./view7/font/Chevron-Right.png"alt=""></button>
                 </div>
             </div>
             <!-- 下拉区域 -->
             <div ng-hide="myVar2" class="buttondropdown">
                 <ul>
-                    <li><div><span>区域格式:</span><span ng-model="style">{{style}}</span></div></li>
-                    <li><div><span>日历:</span><span ng-model="rili">{{rili}}</span></div></li>
-                    <li><div><span>一周的第一天:</span><span ng-model="firstday">{{firstday}}</span></div></li>
-                    <li><div><span>短日期:</span><span ng-model="shortday">{{shortday}}</span></div></li>
-                    <li><div><span>长日期:</span><span ng-model="longday">{{longday}}</span></div></li>
-                    <li><div><span>长时间:</span><span ng-model="longtime">{{longtime}}</span></div></li>
-                    <li><div><span>短时间:</span><span ng-model="shorttime">{{shorttime}}</span></div></li>
+                    <li>
+                        <div><span>区域格式:</span><span ng-model="style">{{style}}</span></div>
+                    </li>
+                    <li>
+                        <div><span>日历:</span><span ng-model="rili">{{rili}}</span></div>
+                    </li>
+                    <li>
+                        <div><span>一周的第一天:</span><span ng-model="firstday">{{firstday}}</span></div>
+                    </li>
+                    <li>
+                        <div><span>短日期:</span><span ng-model="shortday">{{shortday}}</span></div>
+                    </li>
+                    <li>
+                        <div><span>长日期:</span><span ng-model="longday">{{longday}}</span></div>
+                    </li>
+                    <li>
+                        <div><span>长时间:</span><span ng-model="longtime">{{longtime}}</span></div>
+                    </li>
+                    <li>
+                        <div><span>短时间:</span><span ng-model="shorttime">{{shorttime}}</span></div>
+                    </li>
                 </ul>
                 <button>更改格式</button>
             </div>
@@ -113,13 +129,11 @@
                 <div class="left"><img src="./view7/font/Chevron-Right.png" alt=""></div>
             </div>
         </div>
-    </div>
-    <div class="fankui-help">
-        <div><img src="./view1/font/wenhao.png" alt=""><span>获取帮助</span></div>
-        <div>
-            <img src="./view1/font/fankui.png" alt=""><span>提供反馈</span>
+        <div class="fankui-help">
+            <div><img src="./view1/font/wenhao.png" alt=""><span>获取帮助</span></div>
+            <div>
+                <img src="./view1/font/fankui.png" alt=""><span>提供反馈</span>
+            </div>
         </div>
-
     </div>
-</div>
 </div>

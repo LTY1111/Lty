@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular
   .module("myApp.view7-input", ["ngRoute"])
@@ -7,7 +7,7 @@ angular
     "$routeProvider",
     function ($routeProvider) {
       $routeProvider.when("/view7/view7-input", {
-        templateUrl: "/view7/view7-input/view7-input.html",
+        templateUrl: "view7/view7-input/view7-input.html",
         controller: "View7Input",
       });
     },

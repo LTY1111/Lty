@@ -1,5 +1,4 @@
-"use strict";
-
+'use strict';
 angular
     .module("myApp.view7-time", ["ngRoute", "myApp.view7-language"])
 
@@ -7,21 +6,23 @@ angular
     "$routeProvider",
     function($routeProvider) {
         $routeProvider.when("/view7/view7-time", {
-            templateUrl: "/view7/view7-time/view7-time.html",
+            templateUrl: "view7/view7-time/view7-time.html",
             controller: "View7Time",
         });
     },
 ])
-
-.controller("View7Time", function($scope, $http, $interval) {
+.controller("View7Time", function($scope, $http, $interval,$demoswitch) {
     $scope.gettimeZoneList = [];
     $scope.getcalendarList = [];
     $scope.selected = '0';
+    $demoswitch.switch0 = false;
+    $demoswitch.switch1 = false;
+    $demoswitch.switch2 = false;
     $scope.time = new Date().toLocaleString();
     $interval(function() {
         $scope.date = new Date().toLocaleString()
     }, 1000);
-   
+  
     // $http({
     //     method: "GET",
     //     url: "http://127.0.0.1:5500/API/timeZone.json",

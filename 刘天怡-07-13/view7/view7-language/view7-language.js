@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular
   .module("myApp.view7-language", ["ngRoute"])
@@ -7,7 +7,7 @@ angular
     "$routeProvider",
     function ($routeProvider) {
       $routeProvider.when("/view7/view7-language", {
-        templateUrl: "/view7/view7-language/view7-language.html",
+        templateUrl: "view7/view7-language/view7-language.html",
         controller: "View7Language",
       });
     },

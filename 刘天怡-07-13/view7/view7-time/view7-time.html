@@ -25,12 +25,12 @@
             </div>
             <!-- 自动设置时间 -->
             <div class="history">
-                <div class="span">
+                <div class="span high">
                     <span>自动设置时间</span>
                 </div>
                 <div class="left">
-                    <div class="switch">
-                        <demoswitch opened="switch0"></demoswitch>
+                    <div>
+                        <demoswitch ng-model="switch0"></demoswitch>
                     </div>
                 </div>
             </div>
@@ -38,41 +38,40 @@
             <div class="history">
                 <div class="span"><span>自动调整为夏令时</span></div>
                 <div class="left">
-                    <div class="switch">
-                        <demoswitch opened="switch1"></demoswitch>
+                    <div>
+                        <demoswitch ng-model="switch1"></demoswitch>
                     </div>
                 </div>
             </div>
             <!-- 时区 -->
             <div class="history">
                 <div class="img"><img src="./view1/font/choise.png" alt=""></div>
-                <div class="span"><span>时区</span>
+                <div class="span high"><span>时区</span>
                 </div>
                 <div class="left">
                     <selectdrop class="select" url="http://127.0.0.1:5500/API/timeZone.json"></selectdrop>
                     <!-- <select ng-init="gettimeZoneList" ng-model="selected" ng-options="x.value as x.key for x in gettimeZoneList"> -->
-                </select>
                 </div>
             </div>
             <!-- 自动设置时区-->
             <div class="history">
-                <div class="span"><span>自动设置时区</span></div>
+                <div class="span high"><span>自动设置时区</span></div>
                 <div class="left">
-                    <div class="switch">
-                        <demoswitch opened="switch2"></demoswitch>
+                    <div>
+                        <demoswitch ng-model="switch2"></demoswitch>
                     </div>
                 </div>
             </div>
             <!-- 手动设置时间 -->
             <div class="history">
-                <div class="span"><span>手动设置日期和时间</span></div>
+                <div class="span high"><span>手动设置日期和时间</span></div>
                 <div class="left">
                     <button>更改</button>
                 </div>
             </div>
         </div>
         <div class="more">
-            <p class=>其他设置</p>
+            <p>其他设置</p>
             <div class="history">
                 <div class="span">
                     <span class="high">立即同步</span>
@@ -98,7 +97,7 @@
         </div>
 
         <div class="more">
-            <p class=>相关链接</p>
+            <p>相关链接</p>
             <div class="history" ng-click="onJumpPage('#!/view7/view7-language')">
                 <div class="img"><img src="./view1/font/choise.png" alt=""></div>
                 <div class="span">
@@ -124,5 +123,4 @@
             <img src="./view1/font/fankui.png" alt=""><span>提供反馈</span>
         </div>
     </div>
-</div>
 </div>

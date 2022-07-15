@@ -212,7 +212,7 @@
   margin-bottom: 12px;
 }
 .whole .items-right .items-right-view1 .more-choise .more :hover {
-  background-color: #a9a7a7;
+  background-color: #e4e1e1;
 }
 .whole .items-right .items-right-view1 .more-choise img {
   width: 40px;
@@ -239,6 +239,7 @@
 }
 .whole .items-right .items-right-view1 .more-choise .history .span .xiao {
   font-size: 14px;
+  color: #7c7878;
 }
 .whole .items-right .items-right-view1 .more-choise .history .left {
   flex-grow: 1;
