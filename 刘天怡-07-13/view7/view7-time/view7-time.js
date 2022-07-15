@@ -11,13 +11,13 @@ angular
         });
     },
 ])
-.controller("View7Time", function($scope, $http, $interval,$demoswitch) {
+.controller("View7Time", function($scope, $http, $interval) {
     $scope.gettimeZoneList = [];
     $scope.getcalendarList = [];
     $scope.selected = '0';
-    $demoswitch.switch0 = false;
-    $demoswitch.switch1 = false;
-    $demoswitch.switch2 = false;
+    $scope.switch0 = false;
+    $scope.switch1 = false;
+    $scope.switch2 = false;
     $scope.time = new Date().toLocaleString();
     $interval(function() {
         $scope.date = new Date().toLocaleString()

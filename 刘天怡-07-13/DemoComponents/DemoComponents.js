@@ -36,7 +36,7 @@ angular
   .component("demoswitch", {
     templateUrl: "DemoComponents/demoswitch.html",
     require: {
-      x:'ngModel'
+      x:'ng-model'
     },
     controller: function($scope) { 
       this.$onInit = function () { 
